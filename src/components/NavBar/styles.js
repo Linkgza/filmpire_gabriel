@@ -7,9 +7,9 @@ export default makeStyles((theme) => ({
         height: '80px',
         display: 'flex',
         justifyContent: 'space-between',
-        marginLeft: '240',
+        marginLeft: '240px',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: 0,
+            marginLeft: '0',
             flexWrap: 'wrap',
         },
     },
@@ -23,6 +23,15 @@ export default makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             width: drawerWidth,
             flexShring: 0,
+        },
+    },
+    drawerPaper: {
+        width: drawerWidth,
+    },
+    linkButton: {
+        '&:hover' : {
+            color: 'white !important', 
+            textDecoration: 'none',
         },
     },
 }));
