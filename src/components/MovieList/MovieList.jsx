@@ -4,7 +4,7 @@ import { Grid } from '@mui/material';
 import useStyles from './styles';
 import { Movie } from '..';
 
-const MovieList({ movies }) {
+function MovieList({ movies }) {
   const classes = useStyles();
 
   return (
@@ -14,6 +14,6 @@ const MovieList({ movies }) {
       ))}
     </Grid>
   );
-}''
+}
 
 export default MovieList;
