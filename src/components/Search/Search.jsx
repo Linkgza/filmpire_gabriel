@@ -10,6 +10,7 @@ import useStyles from './styles';
 function Search() {
   const classes = useStyles();
   const [query, setQuery] = useState('');
+  const dispatch = useDispatch();
 
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
