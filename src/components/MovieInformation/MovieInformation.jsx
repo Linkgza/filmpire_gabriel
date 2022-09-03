@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 
-import { useStyles } from './styles';
+import useStyles from './styles';
 import { useGetMovieQuery } from '../../services/TMDB';
 
 function MovieInformation() {

@@ -20,5 +20,10 @@ export default makeStyles((theme) => ({
       height: '350px',
       marginBottom: '30px',
     },
+    [theme.breakpoints.down('md')]: {
+      margin: '0 auto',
+      width: '50%',
+      height: '350px',
+    },
   },
 }));
