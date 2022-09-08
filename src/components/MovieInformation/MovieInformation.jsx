@@ -7,7 +7,7 @@ import axios from 'axios';
 
 import { selectGenreOrCategory } from '../../features/currentGenreOrCategory';
 import useStyles from './styles';
-import { useGetMovieQuery } from '../../services/TMDB';
+import { useGetMovieQuery, useGetRecommendationsQuery } from '../../services/TMDB';
 import genreIcons from '../../assets/genres';
 
 function MovieInformation() {
@@ -15,6 +15,8 @@ function MovieInformation() {
   const { data, isFetching, error } = useGetMovieQuery(id);
   const classes = useStyles();
   const dispatch = useDispatch();
+
+  const { data: recommendations, isFetching: isRecommendationsFetching } = useGetRecommendationsQuery({ list: '/recommendations', movie_id: id });
 
   const isMovieFavorited = false;
   const isMovieWatchlisted = false;
@@ -26,6 +28,8 @@ function MovieInformation() {
   const addToWatchlist = () => {
 
   };
+
+  console.log(recommendations);
 
   if (isFetching) {
     return (
@@ -134,6 +138,12 @@ function MovieInformation() {
           </div>
         </Grid>
       </Grid>
+      <Box marginTop="5rem" width="100%">
+        <Typography variant="h3" gutterBottom align="center">
+          You might also like
+        </Typography>
+        {/* Loop through the recommended movies... */}
+      </Box>
     </Grid>
   );
 }
