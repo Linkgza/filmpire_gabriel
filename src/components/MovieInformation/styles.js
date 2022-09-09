@@ -25,7 +25,6 @@ export default makeStyles((theme) => ({
       height: '350px',
       marginBottom: '30px',
     },
-
   },
   genresContainer: {
     margin: '10px 0 !important',
@@ -59,6 +58,19 @@ export default makeStyles((theme) => ({
     width: '100%',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
+    },
+  },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  video: {
+    width: '50%',
+    height: '50%',
+    [theme.breakpoints.down('sm')]: {
+      width: '90',
+      height: '90',
     },
   },
 }));
